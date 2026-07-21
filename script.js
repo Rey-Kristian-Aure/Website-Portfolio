@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Jordan Reyes — Portfolio Script (Updated for Rey Kristian Aure)
+   Rey Kristian Aure — Portfolio Script
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(stage.children);
   const dots = Array.from(dotsWrap.children);
 
-  function renderCarousel(){
+  function renderCarousel() {
     const n = cards.length;
     cards.forEach((card, i) => {
       const offset = (i - activeIndex + n) % n;
@@ -156,15 +156,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const dot = document.getElementById('cursorDot');
 
   if (window.matchMedia('(pointer: fine)').matches) {
-    let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+    let ringX = 0,
+      ringY = 0,
+      mouseX = 0,
+      mouseY = 0;
 
     window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX; mouseY = e.clientY;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
       dot.style.left = mouseX + 'px';
       dot.style.top = mouseY + 'px';
     });
 
-    function animateRing(){
+    function animateRing() {
       ringX += (mouseX - ringX) * 0.18;
       ringY += (mouseY - ringY) * 0.18;
       ring.style.left = ringX + 'px';
@@ -242,5 +246,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   revealEls.forEach(el => observer.observe(el));
+
+  /* ------------------------------------------------------------------
+     (Optional) re‑render carousel on resize to keep it centered
+     ------------------------------------------------------------------ */
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => renderCarousel(), 200);
+  });
 
 });

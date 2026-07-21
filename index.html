@@ -1,173 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rey Kristian Aure — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rey Kristian Aure — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Custom cursor -->
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
+    <!-- Custom cursor -->
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="nav-brand">RK<span class="brand-dot">.</span></a>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand">RK<span class="brand-dot">.</span></a>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active-link">Home</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#certificates" class="nav-link">Education & Certs</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-    </ul>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Education &amp; Certs</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+            </ul>
 
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                </button>
 
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home" class="mobile-link">Home</a>
-  <a href="#skills" class="mobile-link">Skills</a>
-  <a href="#certificates" class="mobile-link">Education & Certs</a>
-  <a href="#projects" class="mobile-link">Projects</a>
-</div>
-
-<!-- Hero -->
-<header class="hero" id="home">
-  <div class="hero-bg-orb orb-gold"></div>
-  <div class="hero-bg-orb orb-slate"></div>
-
-  <div class="hero-content reveal">
-    <div class="headshot-frame">
-      <div class="headshot-ring"></div>
-      <div class="headshot-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M4 20c1.8-4 5-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-        </svg>
-      </div>
-    </div>
-    <h1 class="hero-name">Rey Kristian Aure</h1>
-
-    <div class="hero-actions" style="margin-top: 2rem;">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#skills" class="btn btn-outline">View Skills</a>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#certificates" class="mobile-link">Education &amp; Certs</a>
+        <a href="#projects" class="mobile-link">Projects</a>
     </div>
 
-    <div class="hero-socials">
-      <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/rey-kristian-aure-08b00b424?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="social-link">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/share/1HXrd9R8Yj/" target="_blank" aria-label="Facebook" class="social-link">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
-      </a>
-      <a href="mailto:reykristianaure2005@gmail.com" aria-label="Email" class="social-link">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      </a>
-    </div>
-  </div>
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <div class="hero-bg-orb orb-gold"></div>
+        <div class="hero-bg-orb orb-slate"></div>
 
-  <div class="scroll-cue">
-    <span></span>
-    <p>Scroll</p>
-  </div>
-</header>
+        <div class="hero-content reveal">
+            <div class="headshot-frame">
+                <div class="headshot-ring"></div>
+                <div class="headshot-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M4 20c1.8-4 5-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="hero-name">Rey Kristian Aure</h1>
 
-<!-- Skills -->
-<section class="skills" id="skills">
-  <div class="section-head reveal">
-    <p class="eyebrow">Capabilities</p>
-    <h2 class="section-title">Core Skills</h2>
-  </div>
+            <div class="hero-actions" style="margin-top: 2rem;">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#skills" class="btn btn-outline">View Skills</a>
+            </div>
 
-  <div class="carousel-wrap reveal">
-    <div class="carousel-stage" id="carouselStage">
-      <!-- cards injected by JS -->
-    </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rey-kristian-aure-08b00b424?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="social-link">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/share/1HXrd9R8Yj/" target="_blank" aria-label="Facebook" class="social-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                </a>
+                <a href="mailto:reykristianaure2005@gmail.com" aria-label="Email" class="social-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+        </div>
 
-    <div class="carousel-controls">
-      <button class="carousel-btn" id="prevBtn" aria-label="Previous skill">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel-dots" id="carouselDots"></div>
-      <button class="carousel-btn" id="nextBtn" aria-label="Next skill">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
+        <div class="scroll-cue">
+            <span></span>
+            <p>Scroll</p>
+        </div>
+    </header>
 
-<!-- Education & Certificates -->
-<section class="certificates" id="certificates">
-  <div class="section-head reveal">
-    <p class="eyebrow">Credentials</p>
-    <h2 class="section-title">Education & Certifications</h2>
-  </div>
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="section-head reveal">
+            <p class="eyebrow">Capabilities</p>
+            <h2 class="section-title">Core Skills</h2>
+        </div>
 
-  <div class="cert-grid" id="certGrid">
-    <!-- cards injected by JS -->
-  </div>
-</section>
+        <div class="carousel-wrap reveal">
+            <div class="carousel-stage" id="carouselStage">
+                <!-- cards injected by JS -->
+            </div>
 
-<!-- Projects -->
-<section class="projects" id="projects">
-  <div class="section-head reveal">
-    <p class="eyebrow">Selected Work</p>
-    <h2 class="section-title">Projects</h2>
-  </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Previous skill">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="nextBtn" aria-label="Next skill">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
 
-  <div class="project-grid" id="projectGrid">
-    <!-- cards injected by JS -->
-  </div>
-</section>
+    <!-- Education & Certificates -->
+    <section class="certificates" id="certificates">
+        <div class="section-head reveal">
+            <p class="eyebrow">Credentials</p>
+            <h2 class="section-title">Education &amp; Certifications</h2>
+        </div>
 
-<!-- Footer -->
-<footer class="site-footer reveal">
-  <div class="footer-inner">
-    <div class="footer-brand">RK<span class="brand-dot">.</span></div>
-    
-    <div class="footer-socials">
-      <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/rey-kristian-aure-08b00b424?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="social-link">
-        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/share/1HXrd9R8Yj/" target="_blank" aria-label="Facebook" class="social-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
-      </a>
-      <a href="mailto:reykristianaure2005@gmail.com" aria-label="Email" class="social-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      </a>
-    </div>
-    <p class="footer-copy">© 2026 Rey Kristian Aure. All rights reserved.</p>
-  </div>
-</footer>
+        <div class="cert-grid" id="certGrid">
+            <!-- cards injected by JS -->
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="section-head reveal">
+            <p class="eyebrow">Selected Work</p>
+            <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+            <!-- cards injected by JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer reveal">
+        <div class="footer-inner">
+            <div class="footer-brand">RK<span class="brand-dot">.</span></div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rey-kristian-aure-08b00b424?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="social-link">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/share/1HXrd9R8Yj/" target="_blank" aria-label="Facebook" class="social-link">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                </a>
+                <a href="mailto:reykristianaure2005@gmail.com" aria-label="Email" class="social-link">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Rey Kristian Aure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@
    ========================================================================== */
 
 :root{
-  /* Core palette */
   --charcoal: #121212;
   --charcoal-deep: #0A0A0A;
   --charcoal-mid: #1A1A1A;
@@ -21,7 +20,6 @@
   --surface: rgba(255,255,255,0.035);
   --surface-strong: rgba(255,255,255,0.06);
   
-  /* Borders updated to lean white on dark mode */
   --border-soft: rgba(255, 255, 255, 0.15);
   --border-strong: rgba(255, 255, 255, 0.35);
 
@@ -36,37 +34,41 @@
   --ease: cubic-bezier(.22,1,.36,1);
 }
 
-/* Light mode overrides */
 body.light-mode{
   --charcoal: #F5F2EC;
-  --charcoal-deep: #EDE8DE;
+  --charcoal-deep: #E8E2D8;
   --charcoal-mid: #FFFFFF;
-  --text-primary: #1C1A16;
-  --text-secondary: #55503F;
-  --text-muted: #8C8672;
-  --surface: rgba(18,18,18,0.03);
-  --surface-strong: rgba(18,18,18,0.05);
+  --text-primary: #0A0A0A;
+  --text-secondary: #2C2C2C;
+  --text-muted: #5A5A5A;
+  --surface: rgba(0,0,0,0.04);
+  --surface-strong: rgba(0,0,0,0.07);
   
-  /* Borders updated to lean black on light mode */
-  --border-soft: rgba(0, 0, 0, 0.15);
-  --border-strong: rgba(0, 0, 0, 0.35);
+  --border-soft: rgba(0, 0, 0, 0.18);
+  --border-strong: rgba(0, 0, 0, 0.4);
   
   --shadow-deep: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 
-html{ scroll-behavior:smooth; }
+html{
+  overflow: hidden;
+  height: 100%;
+}
 
 body{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  height: 100dvh;
   font-family: var(--font-body);
   color: var(--text-primary);
   background: radial-gradient(circle at 50% 0%, var(--charcoal-mid) 0%, var(--charcoal-deep) 70%);
   background-attachment: fixed;
-  min-height: 100vh;
-  overflow-x: hidden;
   transition: background 0.5s var(--ease), color 0.4s var(--ease);
   cursor: none;
+  scrollbar-gutter: stable;
 }
 
 @media (max-width: 860px){
@@ -80,14 +82,21 @@ img{ max-width: 100%; display:block; }
 
 ::selection{ background: var(--gold); color: var(--charcoal-deep); }
 
-/* Scrollbar */
+/* ============================================================
+   SCROLLBAR – gold gradient, single scrollbar
+   ============================================================ */
 ::-webkit-scrollbar{ width: 9px; }
 ::-webkit-scrollbar-track{ background: var(--charcoal-deep); }
 ::-webkit-scrollbar-thumb{ background: linear-gradient(var(--gold-dim), var(--gold)); border-radius: 10px; }
 
-/* ==========================================================================
+body{
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--charcoal-deep);
+}
+
+/* ============================================================
    Custom cursor
-   ========================================================================== */
+   ============================================================ */
 .cursor-ring{
   position: fixed;
   width: 34px; height: 34px;
@@ -118,13 +127,13 @@ img{ max-width: 100%; display:block; }
   .cursor-ring, .cursor-dot{ display:none; }
 }
 
-/* ==========================================================================
-   Navbar — glassmorphism
-   ========================================================================== */
+/* ============================================================
+   Navbar – low z‑index so scrollbar stays on top
+   ============================================================ */
 .navbar{
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 500;
+  z-index: 10;
   height: var(--nav-h);
   display: flex;
   align-items: center;
@@ -233,7 +242,7 @@ body.light-mode .theme-toggle .icon-moon{ opacity: 0; transform: rotate(90deg) s
   transform: translateY(-130%);
   opacity: 0;
   transition: transform .4s var(--ease), opacity .3s var(--ease);
-  z-index: 490;
+  z-index: 9;
 }
 body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
 .mobile-menu.open{ transform: translateY(0); opacity: 1; }
@@ -245,9 +254,9 @@ body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
 }
 .mobile-link:hover{ color: var(--gold); }
 
-/* ==========================================================================
+/* ============================================================
    Buttons
-   ========================================================================== */
+   ============================================================ */
 .btn{
   display: inline-flex;
   align-items: center;
@@ -279,9 +288,9 @@ body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
   background: rgba(212,175,55,0.06);
 }
 
-/* ==========================================================================
+/* ============================================================
    Hero
-   ========================================================================== */
+   ============================================================ */
 .hero{
   position: relative;
   min-height: 100vh;
@@ -323,18 +332,40 @@ body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
   margin-bottom: 1.4rem;
 }
 
+/* ===== PROFILE RING – GEAR WITH EXACTLY 8 TEETH ===== */
 .headshot-frame{
   position: relative;
   width: 132px; height: 132px;
   margin: 0 auto 1.8rem;
 }
+
+/* Inner solid gold hub */
 .headshot-ring{
   position: absolute;
   inset: -8px;
   border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--gold-bright), var(--slate), var(--gold), var(--gold-bright));
-  animation: spin 8s linear infinite;
+  background: var(--gold);
+  box-shadow: 0 0 30px rgba(212,175,55,0.3), inset 0 0 20px rgba(212,175,55,0.1);
+  z-index: 1;
 }
+
+/* Gear teeth – exactly 8, evenly spaced, medium size */
+.headshot-ring::after{
+  content: '';
+  position: absolute;
+  inset: -14px;                /* protrudes 14px from hub */
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--gold) 0deg 20deg,    /* tooth width: 20° */
+    rgba(0,0,0,0.25) 20deg 45deg /* gap: 25° -> total 45° per tooth (360/8) */
+  );
+  mask: radial-gradient(circle at center, transparent 62%, black 63%, black 100%);
+  -webkit-mask: radial-gradient(circle at center, transparent 62%, black 63%, black 100%);
+  animation: spin 8s linear infinite;
+  z-index: 0;
+}
+
 .headshot-placeholder{
   position: absolute;
   inset: 0;
@@ -343,10 +374,13 @@ body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
   border: 3px solid var(--border-strong);
   display: flex; align-items: center; justify-content: center;
   color: var(--text-muted);
+  z-index: 2;
 }
 .headshot-placeholder svg{ width: 52px; height: 52px; }
 
-@keyframes spin{ to{ transform: rotate(360deg); } }
+@keyframes spin{
+  to{ transform: rotate(360deg); }
+}
 
 .hero-name{
   font-family: var(--font-display);
@@ -403,9 +437,9 @@ body.light-mode .mobile-menu{ background: rgba(245,242,236,0.96); }
   50%{ opacity: 1; transform: scaleY(1); transform-origin: top;}
 }
 
-/* ==========================================================================
+/* ============================================================
    Section shared
-   ========================================================================== */
+   ============================================================ */
 section{ padding: 130px 24px; position: relative; }
 
 .section-head{ text-align: center; max-width: 640px; margin: 0 auto 4rem; }
@@ -416,7 +450,6 @@ section{ padding: 130px 24px; position: relative; }
   margin-top: 0.5rem;
 }
 
-/* Scroll reveal */
 .reveal{
   opacity: 0;
   transform: translateY(36px);
@@ -427,9 +460,9 @@ section{ padding: 130px 24px; position: relative; }
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   Skills — 3D Carousel
-   ========================================================================== */
+/* ============================================================
+   Skills – 3D Carousel
+   ============================================================ */
 .carousel-wrap{
   max-width: 1000px;
   margin: 0 auto;
@@ -506,7 +539,6 @@ section{ padding: 130px 24px; position: relative; }
   border-radius: 3px;
 }
 
-/* Carousel position states, set via JS through data-pos */
 .skill-card[data-pos="center"]{
   transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
   z-index: 5;
@@ -583,9 +615,9 @@ section{ padding: 130px 24px; position: relative; }
   background: var(--gold);
 }
 
-/* ==========================================================================
+/* ============================================================
    Certificates
-   ========================================================================== */
+   ============================================================ */
 .cert-grid{
   max-width: 1100px;
   margin: 0 auto;
@@ -636,9 +668,9 @@ section{ padding: 130px 24px; position: relative; }
   color: var(--slate-bright);
 }
 
-/* ==========================================================================
+/* ============================================================
    Projects
-   ========================================================================== */
+   ============================================================ */
 .project-grid{
   max-width: 1160px;
   margin: 0 auto;
@@ -722,9 +754,9 @@ section{ padding: 130px 24px; position: relative; }
 }
 .project-link:hover{ gap: 0.7rem; }
 
-/* ==========================================================================
+/* ============================================================
    Footer
-   ========================================================================== */
+   ============================================================ */
 .site-footer{
   padding: 60px 24px 40px;
   text-align: center;
@@ -744,9 +776,9 @@ section{ padding: 130px 24px; position: relative; }
 .footer-socials .social-link:hover{ background: none; color: var(--gold-bright); box-shadow: none; transform: translateY(-3px); }
 .footer-copy{ font-size: 0.75rem; color: var(--text-muted); }
 
-/* ==========================================================================
+/* ============================================================
    Responsive
-   ========================================================================== */
+   ============================================================ */
 @media (max-width: 860px){
   .nav-links{ display: none; }
   .hamburger{ display: flex; }
