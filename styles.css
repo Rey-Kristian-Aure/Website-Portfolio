@@ -953,7 +953,6 @@ section {
     opacity: 0.25;
     transition: opacity 0.6s ease;
     color: var(--gold);
-    /* ← this makes currentColor = gold */
 }
 .doodle-container .doodle.doodle-strong {
     opacity: 0.4;
@@ -1066,8 +1065,85 @@ section {
 }
 
 /* ============================================================
-   Responsive – fix doodle overlapping on resize
+   Mascot Widget & Typewriter Speech Bubble
    ============================================================ */
+.mascot-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 28px;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgba(26, 26, 26, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid var(--gold);
+    color: var(--gold-bright);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-gold), var(--shadow-deep);
+    margin-bottom: 12px;
+    max-width: 230px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+    pointer-events: auto;
+}
+
+.speech-bubble.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 36px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid var(--gold);
+}
+
+.typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--gold);
+    font-weight: 400;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.mascot-img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+    animation: mascotFloat 4s ease-in-out infinite;
+    pointer-events: auto;
+}
+
+@keyframes mascotFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Responsive – fix doodle overlapping & scale down mascot on mobile */
 @media (max-width: 860px) {
     .nav-links {
         display: none;
@@ -1098,7 +1174,6 @@ section {
         transform: translateX(220px) translateZ(-320px) scale(0.55);
     }
 
-    /* Reduce doodle opacity and size on tablets */
     .doodle-container .doodle {
         opacity: 0.15 !important;
         transform: scale(0.8);
@@ -1131,7 +1206,6 @@ section {
         opacity: 0.3;
     }
 
-    /* Hide most doodles on very small screens to avoid clutter */
     .doodle-container .doodle {
         display: none;
     }
@@ -1142,6 +1216,19 @@ section {
     }
     .doodle-container .doodle.doodle-light {
         display: none;
+    }
+
+    .mascot-widget {
+        bottom: 16px;
+        right: 16px;
+    }
+    .mascot-img {
+        width: 90px;
+    }
+    .speech-bubble {
+        font-size: 0.78rem;
+        max-width: 180px;
+        padding: 8px 12px;
     }
 }
 

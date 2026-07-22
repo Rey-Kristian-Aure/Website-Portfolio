@@ -262,4 +262,50 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeTimeout = setTimeout(() => renderCarousel(), 200);
     });
 
+    /* ------------------------------------------------------------------
+       Mascot Typewriter Speech Bubble Animation Loop
+       ------------------------------------------------------------------ */
+    const messages = [
+        "Hello!",
+        "Welcome to my portfolio website"
+    ];
+
+    const speechBubble = document.getElementById('speechBubble');
+    const speechText = document.getElementById('speechText');
+
+    let msgIndex = 0;
+    let charIndex = 0;
+    const typeSpeed = 70;      // Typing speed per letter (ms)
+    const eraseSpeed = 35;     // Erasing speed per letter (ms)
+    const displayPause = 2200; // Pause when phrase finishes typing (ms)
+    const hidePause = 600;     // Pause before typing next phrase (ms)
+
+    function typeMessage() {
+        speechBubble.classList.add('visible');
+        const currentMsg = messages[msgIndex];
+
+        if (charIndex < currentMsg.length) {
+            speechText.textContent += currentMsg.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeMessage, typeSpeed);
+        } else {
+            setTimeout(eraseMessage, displayPause);
+        }
+    }
+
+    function eraseMessage() {
+        if (charIndex > 0) {
+            speechText.textContent = messages[msgIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseMessage, eraseSpeed);
+        } else {
+            speechBubble.classList.remove('visible');
+            msgIndex = (msgIndex + 1) % messages.length;
+            setTimeout(typeMessage, hidePause);
+        }
+    }
+
+    // Start typing cycle after 1 second on page load
+    setTimeout(typeMessage, 1000);
+
 });
