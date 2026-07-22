@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rey Kristian Aure — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -19,25 +19,17 @@
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#home" class="nav-brand">RK<span class="brand-dot">.</span></a>
-
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link active-link">Home</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certificates" class="nav-link">Education &amp; Certs</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
             </ul>
-
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/>
-                        <path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
                 </button>
-
                 <button class="hamburger" id="hamburger" aria-label="Open menu">
                     <span></span><span></span><span></span>
                 </button>
@@ -53,28 +45,65 @@
         <a href="#projects" class="mobile-link">Projects</a>
     </div>
 
-    <!-- Hero -->
+    <!-- ─── HERO ─── -->
     <header class="hero" id="home">
         <div class="hero-bg-orb orb-gold"></div>
         <div class="hero-bg-orb orb-slate"></div>
+
+        <!-- Doodles scattered across hero -->
+        <div class="doodle-container">
+            <!-- Mortarboard – upper right -->
+            <svg class="doodle doodle-strong doodle-floatA" viewBox="0 0 100 100" style="width:90px;height:90px;top:8%;right:8%;">
+                <path d="M10 45 L50 18 L90 45 L50 72 Z" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="20" y1="45" x2="20" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="80" y1="45" x2="80" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="20" y1="56" x2="80" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="50" y1="72" x2="50" y2="88" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="50" cy="90" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M50 18 L50 28" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+
+            <!-- Star – upper left -->
+            <svg class="doodle doodle-light doodle-drift" viewBox="0 0 100 100" style="width:60px;height:60px;top:15%;left:8%;">
+                <path d="M50 8 L56 38 L86 44 L56 50 L50 80 L44 50 L14 44 L44 38 Z" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+
+            <!-- Pencil – bottom left -->
+            <svg class="doodle doodle-strong doodle-bob" viewBox="0 0 100 100" style="width:80px;height:80px;bottom:15%;left:10%;">
+                <rect x="38" y="18" width="24" height="56" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="38" y="12" width="24" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <polygon points="38,74 50,92 62,74" stroke="currentColor" stroke-width="1.6"/>
+                <line x1="50" y1="28" x2="50" y2="68" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+            </svg>
+
+            <!-- Sparkle – bottom right -->
+            <svg class="doodle doodle-light doodle-pulse" viewBox="0 0 100 100" style="width:50px;height:50px;bottom:20%;right:10%;">
+                <path d="M50 10 L52 40 L80 42 L52 44 L50 74 L48 44 L20 42 L48 40 Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+
+            <!-- Atom – middle-left -->
+            <svg class="doodle doodle-spin" viewBox="0 0 100 100" style="width:70px;height:70px;top:45%;left:5%;opacity:0.12;">
+                <circle cx="50" cy="50" r="8" stroke="currentColor" stroke-width="1.2"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(0 50 50)"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(60 50 50)"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(120 50 50)"/>
+                <circle cx="24" cy="50" r="3" stroke="currentColor" stroke-width="1"/>
+                <circle cx="76" cy="50" r="3" stroke="currentColor" stroke-width="1"/>
+            </svg>
+        </div>
 
         <div class="hero-content reveal">
             <div class="headshot-frame">
                 <div class="headshot-ring"></div>
                 <div class="headshot-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/>
-                        <path d="M4 20c1.8-4 5-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c1.8-4 5-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
                 </div>
             </div>
             <h1 class="hero-name">Rey Kristian Aure</h1>
-
-            <div class="hero-actions" style="margin-top: 2rem;">
+            <div class="hero-actions" style="margin-top:2rem;">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#skills" class="btn btn-outline">View Skills</a>
             </div>
-
             <div class="hero-socials">
                 <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
@@ -97,18 +126,39 @@
         </div>
     </header>
 
-    <!-- Skills -->
+    <!-- ─── SKILLS ─── -->
     <section class="skills" id="skills">
+        <div class="doodle-container">
+            <svg class="doodle doodle-light doodle-floatB" viewBox="0 0 100 100" style="width:65px;height:65px;top:10%;right:10%;">
+                <path d="M50 10 L55 40 L85 45 L55 50 L50 80 L45 50 L15 45 L45 40 Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <svg class="doodle doodle-strong doodle-drift" viewBox="0 0 100 100" style="width:80px;height:80px;bottom:15%;left:8%;">
+                <circle cx="50" cy="50" r="22" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="50" cy="50" r="10" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="50" y1="22" x2="50" y2="16" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="72" y1="32" x2="77" y2="27" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="78" y1="50" x2="84" y2="50" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="72" y1="68" x2="77" y2="73" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="50" y1="78" x2="50" y2="84" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="28" y1="68" x2="23" y2="73" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="22" y1="50" x2="16" y2="50" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="28" y1="32" x2="23" y2="27" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            <svg class="doodle doodle-spin" viewBox="0 0 100 100" style="width:55px;height:55px;top:40%;right:5%;opacity:0.10;">
+                <circle cx="50" cy="50" r="6" stroke="currentColor" stroke-width="1"/>
+                <ellipse cx="50" cy="50" rx="28" ry="10" stroke="currentColor" stroke-width="0.8" transform="rotate(0 50 50)"/>
+                <ellipse cx="50" cy="50" rx="28" ry="10" stroke="currentColor" stroke-width="0.8" transform="rotate(60 50 50)"/>
+                <ellipse cx="50" cy="50" rx="28" ry="10" stroke="currentColor" stroke-width="0.8" transform="rotate(120 50 50)"/>
+            </svg>
+        </div>
+
         <div class="section-head reveal">
             <p class="eyebrow">Capabilities</p>
             <h2 class="section-title">Core Skills</h2>
         </div>
 
         <div class="carousel-wrap reveal">
-            <div class="carousel-stage" id="carouselStage">
-                <!-- cards injected by JS -->
-            </div>
-
+            <div class="carousel-stage" id="carouselStage"></div>
             <div class="carousel-controls">
                 <button class="carousel-btn" id="prevBtn" aria-label="Previous skill">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -121,35 +171,111 @@
         </div>
     </section>
 
-    <!-- Education & Certificates -->
+    <!-- ─── CERTIFICATES ─── -->
     <section class="certificates" id="certificates">
+        <div class="doodle-container">
+            <svg class="doodle doodle-strong doodle-floatC" viewBox="0 0 100 100" style="width:85px;height:85px;top:8%;left:8%;">
+                <path d="M10 45 L50 18 L90 45 L50 72 Z" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="20" y1="45" x2="20" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="80" y1="45" x2="80" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="20" y1="56" x2="80" y2="56" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="50" y1="72" x2="50" y2="88" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="50" cy="90" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M50 18 L50 28" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <svg class="doodle doodle-light doodle-drift" viewBox="0 0 100 100" style="width:75px;height:75px;top:10%;right:8%;">
+                <path d="M50 80 L50 25 C35 20 15 25 10 30 L10 85 C15 80 35 75 50 80 Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M50 80 L50 25 C65 20 85 25 90 30 L90 85 C85 80 65 75 50 80 Z" stroke="currentColor" stroke-width="1.6"/>
+                <line x1="50" y1="25" x2="50" y2="80" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="30" y1="40" x2="46" y2="45" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <line x1="30" y1="50" x2="46" y2="55" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <line x1="30" y1="60" x2="46" y2="65" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <line x1="54" y1="45" x2="70" y2="40" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <line x1="54" y1="55" x2="70" y2="50" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <line x1="54" y1="65" x2="70" y2="60" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+            </svg>
+            <svg class="doodle doodle-strong doodle-bob" viewBox="0 0 100 100" style="width:70px;height:70px;top:35%;left:3%;">
+                <rect x="20" y="30" width="60" height="40" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M20 30 C15 20 30 18 35 25" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M20 70 C15 80 30 82 35 75" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M50 30 L45 20 L50 14 L55 20 L50 30" stroke="currentColor" stroke-width="1.4"/>
+                <line x1="35" y1="45" x2="65" y2="45" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                <line x1="35" y1="52" x2="60" y2="52" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                <line x1="35" y1="59" x2="55" y2="59" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            </svg>
+            <svg class="doodle doodle-light doodle-pulse" viewBox="0 0 100 100" style="width:60px;height:60px;bottom:20%;right:10%;">
+                <rect x="38" y="18" width="24" height="56" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="38" y="12" width="24" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <polygon points="38,74 50,92 62,74" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <svg class="doodle doodle-strong doodle-spin" viewBox="0 0 100 100" style="width:45px;height:45px;bottom:10%;left:5%;opacity:0.3;">
+                <path d="M50 10 L52 40 L80 42 L52 44 L50 74 L48 44 L20 42 L48 40 Z" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+        </div>
+
         <div class="section-head reveal">
             <p class="eyebrow">Credentials</p>
             <h2 class="section-title">Education &amp; Certifications</h2>
         </div>
 
-        <div class="cert-grid" id="certGrid">
-            <!-- cards injected by JS -->
-        </div>
+        <div class="cert-grid" id="certGrid"></div>
     </section>
 
-    <!-- Projects -->
+    <!-- ─── PROJECTS ─── -->
     <section class="projects" id="projects">
+        <div class="doodle-container">
+            <svg class="doodle doodle-strong doodle-floatA" viewBox="0 0 100 100" style="width:80px;height:80px;top:10%;left:8%;">
+                <circle cx="50" cy="50" r="22" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="50" cy="50" r="10" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="50" y1="22" x2="50" y2="16" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="72" y1="32" x2="77" y2="27" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="78" y1="50" x2="84" y2="50" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="72" y1="68" x2="77" y2="73" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="50" y1="78" x2="50" y2="84" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="28" y1="68" x2="23" y2="73" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="22" y1="50" x2="16" y2="50" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="28" y1="32" x2="23" y2="27" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            <svg class="doodle doodle-light doodle-drift" viewBox="0 0 100 100" style="width:70px;height:70px;top:10%;right:8%;">
+                <circle cx="50" cy="50" r="8" stroke="currentColor" stroke-width="1.2"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(0 50 50)"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(60 50 50)"/>
+                <ellipse cx="50" cy="50" rx="34" ry="12" stroke="currentColor" stroke-width="1" transform="rotate(120 50 50)"/>
+                <circle cx="24" cy="50" r="3" stroke="currentColor" stroke-width="1"/>
+                <circle cx="76" cy="50" r="3" stroke="currentColor" stroke-width="1"/>
+            </svg>
+            <svg class="doodle doodle-strong doodle-bob" viewBox="0 0 100 100" style="width:55px;height:55px;top:45%;right:3%;">
+                <path d="M50 10 L55 40 L85 45 L55 50 L50 80 L45 50 L15 45 L45 40 Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <svg class="doodle doodle-light doodle-pulse" viewBox="0 0 100 100" style="width:45px;height:45px;bottom:15%;left:5%;">
+                <path d="M50 10 L52 40 L80 42 L52 44 L50 74 L48 44 L20 42 L48 40 Z" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <svg class="doodle doodle-spin" viewBox="0 0 100 100" style="width:55px;height:55px;bottom:10%;right:5%;opacity:0.15;">
+                <circle cx="50" cy="50" r="18" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="50" cy="50" r="8" stroke="currentColor" stroke-width="1"/>
+                <line x1="50" y1="26" x2="50" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="67" y1="33" x2="72" y2="28" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="74" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="67" y1="67" x2="72" y2="72" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="50" y1="74" x2="50" y2="80" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="33" y1="67" x2="28" y2="72" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="26" y1="50" x2="20" y2="50" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="33" y1="33" x2="28" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </div>
+
         <div class="section-head reveal">
             <p class="eyebrow">Selected Work</p>
             <h2 class="section-title">Projects</h2>
         </div>
 
-        <div class="project-grid" id="projectGrid">
-            <!-- cards injected by JS -->
-        </div>
+        <div class="project-grid" id="projectGrid"></div>
     </section>
 
-    <!-- Footer -->
+    <!-- ─── FOOTER ─── -->
     <footer class="site-footer reveal">
         <div class="footer-inner">
             <div class="footer-brand">RK<span class="brand-dot">.</span></div>
-
             <div class="footer-socials">
                 <a href="https://github.com/Rey-Kristian-Aure" target="_blank" aria-label="GitHub" class="social-link">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
