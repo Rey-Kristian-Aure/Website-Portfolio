@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const certificates = [
-    { badge: 'JHS', title: 'Naga City Science High School', issuer: 'Junior High School', year: '2018 - 2022' },
-    { badge: 'SHS', title: 'University Of Nueva Caceres', issuer: 'Senior High School | TVL - Computer Programming', year: '2022 - 2024' },
-    { badge: 'COL', title: 'Bicol University', issuer: 'College', year: '2024 - current' },
+    { img: 'images/NCSHS.png', title: 'Naga City Science High School', issuer: 'Junior High School', year: '2018 - 2022' },
+    { img: 'images/UNC.png', title: 'University Of Nueva Caceres', issuer: 'Senior High School | TVL - Computer Programming', year: '2022 - 2024' },
+    { img: 'images/BU.png', title: 'Bicol University', issuer: 'College', year: '2024 - current' },
     { badge: 'AWS', title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2025' },
     { badge: 'ML', title: 'Machine Learning Specialization', issuer: 'DeepLearning.AI · Coursera', year: '2024' },
     { badge: 'DS', title: 'Data Structures & Algorithms', issuer: 'University Coursework', year: '2024' },
@@ -119,9 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
   certificates.forEach((c) => {
     const el = document.createElement('div');
     el.className = 'cert-card';
+    
+    // Check if the item has an image, otherwise use the text badge
+    const badgeContent = c.img 
+      ? `<img src="${c.img}" alt="${c.title} logo" class="cert-badge-img">` 
+      : `<div class="cert-badge">${c.badge}</div>`;
+
     el.innerHTML = `
       <div class="cert-top">
-        <div class="cert-badge">${c.badge}</div>
+        ${badgeContent}
         <span class="cert-year">${c.year}</span>
       </div>
       <div class="cert-title">${c.title}</div>
