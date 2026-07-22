@@ -33,24 +33,32 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ['React', 'Node.js', 'PostgreSQL'],
             name: 'TaskFlow — Team Planner',
             desc: 'A collaborative task manager with real-time boards, role-based permissions, and activity timelines.',
+            demo: '#',
+            caseStudy: '#'
         },
         {
             tag: '02',
             tags: ['Python', 'TensorFlow', 'Flask'],
             name: 'Campus Sentiment Analyzer',
             desc: 'NLP pipeline that classifies student feedback and surfaces trends through a lightweight dashboard.',
+            demo: '#',
+            caseStudy: '#'
         },
         {
             tag: '03',
             tags: ['Java', 'Spring Boot', 'MySQL'],
             name: 'LibrarySys',
             desc: 'A full inventory and lending system for a university library, built for a databases capstone.',
+            demo: '#',
+            caseStudy: '#'
         },
         {
             tag: '04',
             tags: ['JavaScript', 'Three.js'],
             name: 'Orbit — 3D Visualizer',
             desc: 'An interactive WebGL scene visualizing sorting algorithms as orbital motion.',
+            demo: '#',
+            caseStudy: '#'
         },
     ];
 
@@ -137,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ------------------------------------------------------------------
-       Render: Projects
+       Render: Projects (with demo button)
        ------------------------------------------------------------------ */
     const projectGrid = document.getElementById('projectGrid');
     projects.forEach((p) => {
@@ -149,7 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
             <div class="project-name">${p.name}</div>
             <p class="project-desc">${p.desc}</p>
-            <a href="#" class="project-link">View case study →</a>
+            <div class="project-actions">
+              <a href="${p.demo}" class="btn btn-primary project-demo-btn">View Live Demo</a>
+              <a href="${p.caseStudy}" class="project-link">View case study →</a>
+            </div>
           </div>
         `;
         projectGrid.appendChild(el);

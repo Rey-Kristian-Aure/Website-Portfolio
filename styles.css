@@ -596,6 +596,7 @@ section {
     align-items: center;
     justify-content: center;
     perspective: 1400px;
+    will-change: transform;
 }
 
 .skill-card {
@@ -606,7 +607,8 @@ section {
     padding: 2px;
     background: linear-gradient(155deg, var(--gold-bright), var(--gold-dim) 40%, var(--slate) 100%);
     transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s var(--ease);
-    will-change: transform;
+    will-change: transform, opacity, filter;
+    backface-visibility: hidden;
 }
 .skill-card-inner {
     height: 100%;
@@ -885,6 +887,16 @@ section {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1.2rem;
+}
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+.project-demo-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
 }
 .project-link {
     font-size: 0.82rem;
